@@ -4,6 +4,8 @@ import Dashboard from './components/Dashboard'
 import CalendarIntegration from './components/CalendarIntegration'
 import SchedulingInterface from './components/SchedulingInterface'
 import MeetingManager from './components/MeetingManager'
+import SubscriptionManager from './components/SubscriptionManager'
+import ChatInterface from './components/ui/ChatInterface'
 import { AppProvider } from './context/AppContext'
 
 function App() {
@@ -16,9 +18,11 @@ function App() {
       case 'calendar':
         return <CalendarIntegration />
       case 'schedule':
-        return <SchedulingInterface />
+        return <ChatInterface />
       case 'meetings':
         return <MeetingManager />
+      case 'subscription':
+        return <SubscriptionManager />
       default:
         return <Dashboard />
     }

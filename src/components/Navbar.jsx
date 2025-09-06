@@ -1,12 +1,13 @@
 import React from 'react'
-import { Calendar, MessageCircle, Settings, BarChart3, Menu } from 'lucide-react'
+import { Calendar, MessageCircle, Settings, BarChart3, Menu, CreditCard } from 'lucide-react'
 
 export default function Navbar({ activeView, setActiveView }) {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
-    { id: 'schedule', label: 'Schedule', icon: MessageCircle },
+    { id: 'schedule', label: 'AI Chat', icon: MessageCircle },
     { id: 'meetings', label: 'Meetings', icon: Calendar },
-    { id: 'calendar', label: 'Calendar', icon: Settings }
+    { id: 'calendar', label: 'Calendar', icon: Settings },
+    { id: 'subscription', label: 'Subscription', icon: CreditCard }
   ]
 
   return (

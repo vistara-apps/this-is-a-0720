@@ -63,6 +63,15 @@ function appReducer(state, action) {
             : integration
         )
       }
+    case 'DISCONNECT_CALENDAR':
+      return {
+        ...state,
+        calendarIntegrations: state.calendarIntegrations.map(integration =>
+          integration.provider === action.payload.provider
+            ? { ...integration, connected: false, email: null }
+            : integration
+        )
+      }
     case 'ADD_CHAT_MESSAGE':
       return {
         ...state,
